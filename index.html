@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Taller14</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" >
         <div class="container-fluid">
           <a class="navbar-brand" href="#">LOREM IPSUN</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,8 +16,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item" id="searchMenu">
+                <form class="d-flex" role="search" >
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+              </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Dolor</a>
+                <a class="nav-link" aria-current="page" href="#">Dolor</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Sit</a>
@@ -24,39 +30,88 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Amet</a>
               </li>
+              <li class="nav-item" id="optionMenu">
+                <p class="d-inline-flex gap-1">
+                  <a class="btn btn-tertiary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Opciones
+                  </a>
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body" id="divoptions">
+                      <div class="row align-items-start" >
+                        <p><a href="#">Opción 1</a></p>
+                      </div>
+                      <div class="row align-items-start" >
+                        <p><a href="#">Opción 2</a></p>
+                      </div>
+                      <div class="row align-items-start" >
+                        <p><a href="#">Opción 3</a></p>
+                      </div>
+                      <div class="row align-items-start" >
+                        <p><a href="#">Opción 4</a></p>
+                      </div>
+                      
+                    </div>
+                  </div>
+              </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
+            <div id="searchNav">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              </form>
+            </div>
+            
           </div>
         </div>
     </nav>
+    <div class="col-12 text-center" id="titulos">
     <h4>Lorem Ipsum...</h4>
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="2000">
-            <h6 class="d-block w-100" alt="...">...vestibulum mollis, tortor ac congue commodo</h6>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <h6 class="d-block w-100" alt="...">...vestibulum mollis, tortor ac congue commodo</h6>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <h6 class="d-block w-100" alt="...">Hola Nicoooo</h6>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <h6 class="d-block w-100" alt="...">¿Como estas?</h6>
+            </div>
           </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <h6 class="d-block w-100" alt="...">Hola Nicoooo</h6>
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <h6 class="d-block w-100" alt="...">¿Como estas?</h6>
-          </div>
-        </div>
+      </div>
     </div>
-    <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            First in DOM, no order applied
+    <div class="container text-justify">
+      <div class="row align-items-start" id="contenedor">
+        <div class="col-lg-3" id="optionList" >
+          <div class="row align-items-start" >
+            <p><a href="#">Opción 1</a></p>
           </div>
-          <div class="col order-5">
-            Second in DOM, with a larger order
+          <div class="row align-items-start" >
+            <p><a href="#">Opción 2</a></p>
           </div>
-          <div class="col order-1">
-            Third in DOM, with an order of 1
+          <div class="row align-items-start" >
+            <p><a href="#">Opción 3</a></p>
+          </div>
+          <div class="row align-items-start" >
+            <p><a href="#">Opción 4</a></p>
           </div>
         </div>
+        <div class="col-lg-9 col-md-12 col-sm-12" id="container">
+          <div class="row align-items-start" style="background-color: rgb(248, 249, 250); margin-bottom: 10px; margin-left: 1px;">
+            <div class="col-lg-4 col-md-6 col-sm-12"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mollis, tortor ac congue commodo, nisi neque bibendum elit quis vulputate dolor augue ut mauris. tincidunt.</p></div>
+            <div class="col-lg-4 col-md-6 col-sm-12"><p>Donec diam sem, vestibulum quis ullamcorper sit amet, faucibus id mi. Vestibulum lectus nisi, interdum sed lobortis non, ultricies lacinia erat.</p></div>
+            <div class="col-lg-4 col-md-6 col-sm-12"><p>Pellentesque ac bibendum metus. Mauris rhoncus, lectus in pellentesque pretium, est nisl aliquam arcu, ut pulvinar mauris ipsum quis sem.</p></div>
+          </div>
+          <div class="row align-items-start" style="background-color: rgb(248, 249, 250); margin-bottom: 10px; margin-left: 1px;">
+            <div class="col-lg-4 col-md-6 col-sm-12"><p>Morbi venenatis, ante vel interdum imperdiet, felis sapien semper diam, eu molestie dolor felis in purus.</p></div>
+            <div class="col-lg-4 col-md-6 col-sm-12"><p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p></div>
+            <div class="col-lg-4 col-md-6 col-sm-12"><p>Donec fermentum non velit dictum condimentum. Duis dignissim erat orci. Aenean quis dolor et sapien viverra tincidunt.</p></div>
+          </div>
+          <div class="row align-items-start" style="background-color: rgb(248, 249, 250); margin-bottom: 10px; margin-left: 1px;">
+            <div class="col-lg-4 col-md-6 col-sm-12"><p>Nam eget ullamcorper metus. Vestibulum scelerisque enim est, ac laoreet justo tristique id.</p></div>
+            <div class="col-lg-4 col-md-6 col-sm-12"><p>Nullam placerat ex sed risus lobortis, non auctor arcu pellentesque. Donec ac mattis nisi. Etiam commodo mattis quam eget iaculis.</p></div>
+          </div>  
+        </div>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
 </body>
